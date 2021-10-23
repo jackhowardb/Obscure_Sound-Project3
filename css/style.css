@@ -1,22 +1,40 @@
 
-
-.leftside, .rightside {
-  height: 50vh;
-  width: 100%;
+body {
+  background-color: black;
+  overflow-y: hidden !important;
 }
 
-@media screen and (min-width:768px){
-  .leftside, .rightside {
-    height: 100vh;
-  }
+.navbar {
+
+  font-family: 'Roboto', sans-serif;
+  font-size: large;
+
 }
 
-.leftside {
-  background: black;
-  color: white;
+.jumbotron {
+  background-image: url("../images/Group\ 57-2.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position:center;
+  background-color: transparent;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  margin-top: -15px;
 }
-.rightside {
-  background: white;
+
+.jumboCopy {
+  width: 70%;
+  min-width: 500px;
+  max-width: 700px;
+  opacity: 0.8;
+  text-align: left;
+  margin: 30px;
+  background-color: black;
+  border: .5px solid black;
+  color:white;
+  margin: 5%;
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -27,7 +45,7 @@
 
 
 
-/*buttons*/
+/*buttons
 #login {
   display: inline-block;
   border-radius: 4px;
@@ -84,83 +102,7 @@
   opacity: 1;
   right: 0;
 }
-/*end buttons*/
-
-
-.rightside {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  background-color: azure;
-  overflow: hidden;
-}
-
-.rightside::before {
-  display: block;
-  position: absolute;
-  top: 33vh;
-  height: 33vh;
-  width: 100vw;
-}
-
-
-
-.wrapper {
-  position: relative;
-  top: 0vh;
-  transform: translateY(-50%);
-  max-width: max-content;
-  margin: 0 auto;
-  perspective: 500px;
-  
-}
-
-.logo {
-  position: absolute;
-  margin: 0 100px;
-  animation-name: flow;
-  animation-duration: 15s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  opacity: 0%;
-}
-
-@keyframes flow {
-  0% {
-    transform: rotateX(10deg) rotateY(30deg) translate(150px, 150px);
-    opacity: 0%;
-  }
-
-  10% {
-    opacity: 100%;
-  }
-
-  90% {
-    opacity: 100%;
-  }
-
-  100% {
-    opacity: 0%;
-    transform: rotateX(10deg) rotateY(30deg) translate(-150px, -150px);
-  }
-}
-
-details {
-  position: fixed;
-  top: 10px;
-  left: 30%;
-}
-
-summary {
-  display: block;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-
-
+end buttons*/
 
 
 

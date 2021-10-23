@@ -1,0 +1,65 @@
+body {
+    color: #666;
+  }
+  
+  .container {
+    margin-top: 130px;
+  }
+  
+  .jumbotron {
+    background: #fff;
+    margin: 0;
+    padding: 0 0 45px 0;
+  }
+  
+  .jumbotron h2 {
+    font-size: 27px;
+    padding-top: 5px;
+  }
+  
+  .jumbotron h3 {
+    padding-bottom: 15px;
+    padding-top: 5px;
+  }
+  
+  .jumbotron img {
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, .1);
+  }
+  
+  .biography {
+    line-height: 1.65;
+    max-width: 652px;
+    width: 93%;
+    margin: 0 auto;
+  }
+  
+  .biography h4 {
+    margin-bottom: 16px;
+    font-size: 1.7em;
+  }
+  
+  .biography p {
+    font-size: 1.12em;
+    color: #777;
+    padding-top: 7px;
+  }
+  
+  .biography blockquote {
+    padding: 20px;
+    font-size: 25px;
+  }
+  
+  .footer {
+    background: #222;
+    color: #ccc;
+    font-size: 13px;
+    line-height: 2;
+    padding: 17px;
+    margin: 10px 0 0 0;
+  }
+  
+  .footer a {
+    color: #F0E68C;
+    color: #FFB6C1;
+    color: #20B2AA;
+  }
