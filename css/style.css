@@ -12,11 +12,13 @@ body {
 }
 
 .jumbotron {
-  background-image: url("../images/Group\ 57-2.png");
+  background-image: url("/images/Hero1.png");
   background-size: 100%;
+  
   background-repeat: no-repeat;
   background-position:center;
   background-color: transparent;
+  height: fit-content;
   display: flex;
   align-items: left;
   justify-content: left;
@@ -27,14 +29,17 @@ body {
   width: 70%;
   min-width: 500px;
   max-width: 700px;
-  opacity: 0.8;
   text-align: left;
   margin: 30px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
   border: .5px solid black;
   color:white;
   margin: 5%;
   font-family: 'Roboto', sans-serif;
+   padding-left: 20px;
+   padding-bottom: 20px;
+   padding-top: 20px;
+   border-radius: 70px 10px;
 }
 
 
@@ -45,37 +50,24 @@ body {
 
 
 
-/*buttons
-#login {
+
+
+
+.button {
   display: inline-block;
   border-radius: 4px;
-  background-color: white;
+  background-color:#D6EA5C;
   border: none;
   color: black;
   text-align: center;
   font-family: 'DM Sans', sans-serif;
-  font-size: 12px;
-  padding: 10px;
-  width: 120px;
+  font-size: 17px;
+  padding: 12px;
+  width: 150px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;  
-}
-
-#join {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: black;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 12px;
-  padding: 10px;
-  width: 120px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;  
+  text-decoration: none;
 }
 
 .button span {
@@ -92,6 +84,7 @@ body {
   top: 0;
   right: -20px;
   transition: 0.5s;
+  text-decoration: none;
 }
 
 .button:hover span {
@@ -102,7 +95,12 @@ body {
   opacity: 1;
   right: 0;
 }
-end buttons*/
+
+
+.navbar-nav > li{
+  padding-left:20px;
+  padding-right:20px;
+}
 
 
 

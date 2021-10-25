@@ -1,220 +1,195 @@
-/*
-design by Voicu Apostol.
-design: https://dribbble.com/shots/3533847-Mini-Music-Player
-I can't find any open music api or mp3 api so i have to download all musics as mp3 file.
-You can fork on github: https://github.com/muhammederdem/mini-player
-*/
+// Select all the elements in the HTML page
+// and assign them to a variable
+let now_playing = document.querySelector(".now-playing");
+let track_art = document.querySelector(".track-art");
+let track_name = document.querySelector(".track-name");
+let track_artist = document.querySelector(".track-artist");
+  
+let playpause_btn = document.querySelector(".playpause-track");
+let next_btn = document.querySelector(".next-track");
+let prev_btn = document.querySelector(".prev-track");
+  
+let seek_slider = document.querySelector(".seek_slider");
+let volume_slider = document.querySelector(".volume_slider");
+let curr_time = document.querySelector(".current-time");
+let total_duration = document.querySelector(".total-duration");
+  
+// Specify globally used values
+let track_index = 0;
+let isPlaying = false;
+let updateTimer;
+  
+// Create the audio element for the player
+let curr_track = document.createElement('audio');
+  
+// Define the list of tracks that have to be played
+let track_list = [
+  {
+    name: "Name Of Song 1",
+    artist: "Band 1",
+    image: "Image URL",
+    path: "Night_Owl.mp3"
+  },
+  {
+    name: "Name Of Song 2",
+    artist: "Band 2",
+    image: "Image URL",
+    path: "Enthusiast.mp3"
+  },
+  {
+    name: "Name Of Song 3",
+    artist: "Band 3",
+    image: "Image URL",
+    path: "Shipping_Lanes.mp3",
+  },
+];
 
-new Vue({
-    el: "#app",
-    data() {
-      return {
-        audio: null,
-        circleLeft: null,
-        barWidth: null,
-        duration: null,
-        currentTime: null,
-        isTimerPlaying: false,
-        tracks: [
-          {
-            name: "Song 1",
-            artist: "Norm Ender",
-            cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/1.jpg",
-            source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
-            url: "https://www.youtube.com/watch?v=z3wAjJXbYzA",
-            favorited: false
-          },
-          {
-            name: "Everybody Knows",
-            artist: "Leonard Cohen",
-            cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/2.jpg",
-            source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/2.mp3",
-            url: "https://www.youtube.com/watch?v=Lin-a2lTelg",
-            favorited: true
-          },
-          {
-            name: "Talk.Like.That.",
-            artist: "LOVE LIGHTS DRIVING",
-            cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/3.jpg",
-            source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/3.mp3",
-            url: "blog.html",
-            favorited: false
-          },
-          {
-            name: "Butterflies",
-            artist: "Sia",
-            cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/4.jpg",
-            source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/4.mp3",
-            url: "https://www.youtube.com/watch?v=kYgGwWYOd9Y",
-            favorited: false
-          },
-          {
-            name: "The Final Victory",
-            artist: "Haggard",
-            cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/5.jpg",
-            source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/5.mp3",
-            url: "https://www.youtube.com/watch?v=0WlpALnQdN8",
-            favorited: true
-          },
-          {
-            name: "Genius ft. Sia, Diplo, Labrinth",
-            artist: "LSD",
-            cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/6.jpg",
-            source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/6.mp3",
-            url: "https://www.youtube.com/watch?v=HhoATZ1Imtw",
-            favorited: false
-          },
-          {
-            name: "The Comeback Kid",
-            artist: "Lindi Ortega",
-            cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/7.jpg",
-            source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/7.mp3",
-            url: "https://www.youtube.com/watch?v=me6aoX0wCV8",
-            favorited: true
-          },
-          {
-            name: "Overdose",
-            artist: "Grandson",
-            cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/8.jpg",
-            source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/8.mp3",
-            url: "https://www.youtube.com/watch?v=00-Rl3Jlx-o",
-            favorited: false
-          },
-          {
-            name: "Rag'n'Bone Man",
-            artist: "Human",
-            cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/9.jpg",
-            source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/9.mp3",
-            url: "https://www.youtube.com/watch?v=L3wKzyIN1yk",
-            favorited: false
-          }
-        ],
-        currentTrack: null,
-        currentTrackIndex: 0,
-        transitionName: null
-      };
-    },
-    methods: {
-      play() {
-        if (this.audio.paused) {
-          this.audio.play();
-          this.isTimerPlaying = true;
-        } else {
-          this.audio.pause();
-          this.isTimerPlaying = false;
-        }
-      },
-      generateTime() {
-        let width = (100 / this.audio.duration) * this.audio.currentTime;
-        this.barWidth = width + "%";
-        this.circleLeft = width + "%";
-        let durmin = Math.floor(this.audio.duration / 60);
-        let dursec = Math.floor(this.audio.duration - durmin * 60);
-        let curmin = Math.floor(this.audio.currentTime / 60);
-        let cursec = Math.floor(this.audio.currentTime - curmin * 60);
-        if (durmin < 10) {
-          durmin = "0" + durmin;
-        }
-        if (dursec < 10) {
-          dursec = "0" + dursec;
-        }
-        if (curmin < 10) {
-          curmin = "0" + curmin;
-        }
-        if (cursec < 10) {
-          cursec = "0" + cursec;
-        }
-        this.duration = durmin + ":" + dursec;
-        this.currentTime = curmin + ":" + cursec;
-      },
-      updateBar(x) {
-        let progress = this.$refs.progress;
-        let maxduration = this.audio.duration;
-        let position = x - progress.offsetLeft;
-        let percentage = (100 * position) / progress.offsetWidth;
-        if (percentage > 100) {
-          percentage = 100;
-        }
-        if (percentage < 0) {
-          percentage = 0;
-        }
-        this.barWidth = percentage + "%";
-        this.circleLeft = percentage + "%";
-        this.audio.currentTime = (maxduration * percentage) / 100;
-        this.audio.play();
-      },
-      clickProgress(e) {
-        this.isTimerPlaying = true;
-        this.audio.pause();
-        this.updateBar(e.pageX);
-      },
-      prevTrack() {
-        this.transitionName = "scale-in";
-        this.isShowCover = false;
-        if (this.currentTrackIndex > 0) {
-          this.currentTrackIndex--;
-        } else {
-          this.currentTrackIndex = this.tracks.length - 1;
-        }
-        this.currentTrack = this.tracks[this.currentTrackIndex];
-        this.resetPlayer();
-      },
-      nextTrack() {
-        this.transitionName = "scale-out";
-        this.isShowCover = false;
-        if (this.currentTrackIndex < this.tracks.length - 1) {
-          this.currentTrackIndex++;
-        } else {
-          this.currentTrackIndex = 0;
-        }
-        this.currentTrack = this.tracks[this.currentTrackIndex];
-        this.resetPlayer();
-      },
-      resetPlayer() {
-        this.barWidth = 0;
-        this.circleLeft = 0;
-        this.audio.currentTime = 0;
-        this.audio.src = this.currentTrack.source;
-        setTimeout(() => {
-          if(this.isTimerPlaying) {
-            this.audio.play();
-          } else {
-            this.audio.pause();
-          }
-        }, 300);
-      },
-      favorite() {
-        this.tracks[this.currentTrackIndex].favorited = !this.tracks[
-          this.currentTrackIndex
-        ].favorited;
-      }
-    },
-    created() {
-      let vm = this;
-      this.currentTrack = this.tracks[0];
-      this.audio = new Audio();
-      this.audio.src = this.currentTrack.source;
-      this.audio.ontimeupdate = function() {
-        vm.generateTime();
-      };
-      this.audio.onloadedmetadata = function() {
-        vm.generateTime();
-      };
-      this.audio.onended = function() {
-        vm.nextTrack();
-        this.isTimerPlaying = true;
-      };
+
+
+function loadTrack(track_index) {
+  // Clear the previous seek timer
+  clearInterval(updateTimer);
+  resetValues();
   
-      // this is optional (for preload covers)
-      for (let index = 0; index < this.tracks.length; index++) {
-        const element = this.tracks[index];
-        let link = document.createElement('link');
-        link.rel = "prefetch";
-        link.href = element.cover;
-        link.as = "image"
-        document.head.appendChild(link)
-      }
-    }
-  });
+  // Load a new track
+  curr_track.src = track_list[track_index].path;
+  curr_track.load();
   
+  // Update details of the track
+  track_art.style.backgroundImage = 
+     "url(" + track_list[track_index].image + ")";
+  track_name.textContent = track_list[track_index].name;
+  track_artist.textContent = track_list[track_index].artist;
+  //now_playing.textContent = 
+    // "PLAYING " + (track_index + 1) + " OF " + track_list.length;
   
+  // Set an interval of 1000 milliseconds
+  // for updating the seek slider
+  updateTimer = setInterval(seekUpdate, 1000);
+  
+  // Move to the next track if the current finishes playing
+  // using the 'ended' event
+  curr_track.addEventListener("ended", nextTrack);
+  
+  // Apply a random background color
+  random_bg_color();
+}
+  
+function random_bg_color() {
+  // Get a random number between 64 to 256
+  // (for getting lighter colors)
+  let red = Math.floor(Math.random() * 256) + 64;
+  let green = Math.floor(Math.random() * 256) + 64;
+  let blue = Math.floor(Math.random() * 256) + 64;
+  
+  // Construct a color withe the given values
+  //let bgColor = "rgb(" + red + ", " + green + ", " + blue + ")";
+  
+  // Set the background to the new color
+  //document.body.style.background = bgColor;
+}
+  
+// Function to reset all values to their default
+function resetValues() {
+  curr_time.textContent = "00:00";
+  total_duration.textContent = "00:00";
+  seek_slider.value = 0;
+}
+
+
+function playpauseTrack() {
+  // Switch between playing and pausing
+  // depending on the current state
+  if (!isPlaying) playTrack();
+  else pauseTrack();
+}
+  
+function playTrack() {
+  // Play the loaded track
+  curr_track.play();
+  isPlaying = true;
+  
+  // Replace icon with the pause icon
+  playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
+}
+  
+function pauseTrack() {
+  // Pause the loaded track
+  curr_track.pause();
+  isPlaying = false;
+  
+  // Replace icon with the play icon
+  playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
+}
+  
+function nextTrack() {
+  // Go back to the first track if the
+  // current one is the last in the track list
+  if (track_index < track_list.length - 1)
+    track_index += 1;
+  else track_index = 0;
+  
+  // Load and play the new track
+  loadTrack(track_index);
+  playTrack();
+}
+  
+function prevTrack() {
+  // Go back to the last track if the
+  // current one is the first in the track list
+  if (track_index > 0)
+    track_index -= 1;
+  else track_index = track_list.length - 1;
+    
+  // Load and play the new track
+  loadTrack(track_index);
+  playTrack();
+}
+
+
+
+function seekTo() {
+  // Calculate the seek position by the
+  // percentage of the seek slider 
+  // and get the relative duration to the track
+  seekto = curr_track.duration * (seek_slider.value / 100);
+  
+  // Set the current track position to the calculated seek position
+  curr_track.currentTime = seekto;
+}
+  
+function setVolume() {
+  // Set the volume according to the
+  // percentage of the volume slider set
+  curr_track.volume = volume_slider.value / 100;
+}
+  
+function seekUpdate() {
+  let seekPosition = 0;
+  
+  // Check if the current track duration is a legible number
+  if (!isNaN(curr_track.duration)) {
+    seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+    seek_slider.value = seekPosition;
+  
+    // Calculate the time left and the total duration
+    let currentMinutes = Math.floor(curr_track.currentTime / 60);
+    let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
+    let durationMinutes = Math.floor(curr_track.duration / 60);
+    let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
+  
+    // Add a zero to the single digit time values
+    if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
+    if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
+    if (currentMinutes < 10) { currentMinutes = "0" + currentMinutes; }
+    if (durationMinutes < 10) { durationMinutes = "0" + durationMinutes; }
+  
+    // Display the updated duration
+    curr_time.textContent = currentMinutes + ":" + currentSeconds;
+    total_duration.textContent = durationMinutes + ":" + durationSeconds;
+  }
+}
+
+// Load the first track in the tracklist
+loadTrack(track_index);
+

@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" 
+        href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  
+  <!-- Load the custom CSS style file -->
+  <link rel="stylesheet" type="text/css" href="css/player.css">
     
-    <link
-      rel="stylesheet"
-      href="https://meyerweb.com/eric/tools/css/reset/reset.css"
-    />
-    <link rel="stylesheet" href="/css/player.css" />
-    <title>Mini Player</title>
+   
+    
   </head>
   <body>
        <!--Start Navbar-->
@@ -24,7 +25,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="home.html">
           <img src="/images/OS Logo.png" width="100" height="100" class="d-inline-block align-top" alt="">
         </a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -46,11 +47,150 @@
     </nav>
     <!--End Navbar-->
 
-    <h1 id="welcome">Welcome to your personalized playlist.</h1><br><br>
-
-    <h1 id="heart">Click the Heart Icon to save to your library.</h1><br>
-    <h1 id="link">Click the Link Icon to learn more about the artist</h1>
     
+
+
+    <body>
+
+
+      <!--Start Hero-->
+
+    <section class="hero">
+      <container class="herospace">
+
+    <div class="jumbotron rockBackground" id="about">
+      <div class="jumboCopy">
+      
+
+      
+        <div class="Title">
+          <h1 class="display-4">Welcome to your <br>personalized playlist.</h1>
+        </div>
+        <div class="Picture">
+          <div class="track-art"></div>
+        </div>
+        <div class="Bio">
+          
+          <p><br><strong> Landing – No Such Thing as Normal - #happy #rock</strong><br><br>“Pain’s Got a Rhythm” is a new track from Bianca Jazmine, the South Florida-based artist first caught our ear with the melodic track “Let in to Let Go” last month.“Pain’s Got a Rhythm” is a new track from Bianca Jazmine, the South Florida-based artist first caught our ear with the melodic track “Let in to Let Go” last month. <strong>Check Out More Below!</strong></p>
+          <div class="Player">
+            <div class="buttons">
+              <div class="prev-track" onclick="prevTrack()">
+                <i class="fa fa-step-backward fa-2x"></i>
+              </div>
+              <div class="playpause-track" onclick="playpauseTrack()">
+                <i class="fa fa-play-circle fa-5x"></i>
+              </div>
+              <div class="next-track" onclick="nextTrack()">
+                <i class="fa fa-step-forward fa-2x"></i>
+              </div>
+            </div>
+          </div>
+         <!-- <div class="Progress">
+            <div class="slider_container">
+              <div class="current-time">00:00</div>
+              <input type="range" min="1" max="100"
+                value="0" class="seek_slider" onchange="seekTo()">
+              <div class="total-duration">00:00</div>
+            </div>
+          </div>-->
+        </div>
+      </div>
+
+      </div>
+    </div>
+    </container>
+    </section>
+
+    <section class="moreInfo">
+      <br><br><br>
+
+      <h1 id="curList">Currently Listening To</h1>
+
+      <br><br>
+
+
+      <div class="card mb-3" style="max-width: 540px;">
+         <div class="row no-gutters">
+           <div class="col-md-4">
+             <img src="/images/Right.png" class="card-img" alt="...">
+           </div>
+           <div class="col-md-8">
+             <div class="card-body">
+               <h5 class="card-title">Landing – No Such Thing as Normal</h5>
+               <p class="card-text">With the abundant success of Grouplove’s first album Never Trust a Happy Song – producing hits such as “Colours”, “Itchin’ On A Photograph”, and “Tongue Tied” – and the release of hit single “Ways to Go”, anticipation for Grouplove’s second album Spreading Rumours was almost too much to bear for devoted fans of the funky alt-pop group from Los Angeles.
+ 
+                 As a whole, the album seems jumbled and out of place, as if it’s not quite sure where it fits in musically, especially when compared with the extremely well-arranged freshman effort, Never Trust a Happy Song. However, when examining individual tracks, especially “Ways to Go”, “Shark Attack”, “I’m With You”, and “Hippy Hill”, it’s hard to deny the inevitable success of the work. </p>
+                 <a href="tags.html" button class="button heroBut" style="vertical-align:middle"> <span>Add to Library</span></button></a>
+                 <a href="library2.html" button class="button heroBut" style="vertical-align:middle"> <span>Visit Library</span></button></a>
+                 
+             </div>
+           </div>
+         </div>
+       </div>
+
+       <br><br>
+
+    </section>
+
+<!--
+      <div class="player">
+      
+        Define the section for displaying details 
+        <div class="details">
+          <div class="track-name">Track Name</div>-->
+          <!--<div class="now-playing">PLAYING x OF y</div>
+          <div class="track-art"></div>
+          
+          <div class="track-artist">Track Artist</div>
+        </div>-->
+      
+        <!-- Define the section for displaying track buttons 
+        <div class="buttons">
+          <div class="prev-track" onclick="prevTrack()">
+            <i class="fa fa-step-backward fa-2x"></i>
+          </div>
+          <div class="playpause-track" onclick="playpauseTrack()">
+            <i class="fa fa-play-circle fa-5x"></i>
+          </div>
+          <div class="next-track" onclick="nextTrack()">
+            <i class="fa fa-step-forward fa-2x"></i>
+          </div>
+        </div>-->
+      
+        <!-- Define the section for displaying the seek slider
+        <div class="slider_container">
+          <div class="current-time">00:00</div>
+          <input type="range" min="1" max="100"
+            value="0" class="seek_slider" onchange="seekTo()">
+          <div class="total-duration">00:00</div>
+        </div>-->
+        
+
+
+
+        
+      
+        <!-- Define the section for displaying the volume slider
+        <div class="slider_container">
+          <i class="fa fa-volume-down"></i>
+          <input type="range" min="1" max="100"
+            value="99" class="volume_slider" onchange="setVolume()">
+          <i class="fa fa-volume-up"></i>
+        </div>-->
+      </div>
+
+  
+
+      
+      
+      <!-- Load the main script for the player -->
+      <script src="js/player.js"></script>
+
+
+
+    
+   
+   <!--
     <div class="wrapper" id="app">
       <div class="player">
         <div class="player__top">
@@ -155,8 +295,15 @@
           <path d="M2.304 5.248c-1.248 0-2.304 1.024-2.304 2.304v16.928c0 1.248 1.024 2.304 2.304 2.304s2.304-1.024 2.304-2.304v-16.928c-0.064-1.28-1.056-2.304-2.304-2.304z"></path>
         </symbol>
       </defs>
-    </svg>
+    </svg>-->
+
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script src="/js/player.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     
   </body>
 </html>
