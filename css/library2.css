@@ -2,6 +2,7 @@
 body {
     background-color:#191919;
     overflow-y: hidden !important;
+    
   }
   
   .navbar {
@@ -11,8 +12,8 @@ body {
   
   }
   
-  .jumbotron {
-    background-image: url("/images/library\ pic.png");
+  /*.jumbotron {
+    /*background-image: url("/images/library\ pic.png");
     background-size: 100%;
     
     background-repeat: no-repeat;
@@ -40,16 +41,29 @@ body {
      padding-bottom: 20px;
      padding-top: 20px;
      border-radius: 70px 10px;
+  }*/
+
+  .cardy2 {
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+    background-color: black;
+    border-style: solid;
+  border-color: white;
+  border-radius: 1px 1px 70px 1px;
+
   }
 
 
-  .card {
+  .cardy {
     margin: 0 auto; /* Added */
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
     min-width: 1000px;
     border-radius: 70px 10px;
-    background-color: #C4C4C4;
+    background-color: #5a5959;
+
+
+
 
 }
 
@@ -68,3 +82,80 @@ body {
   
   
   
+
+
+
+.scrolling-wrapper{
+	overflow-x: auto;
+}
+
+body{
+	background-color: black;
+	color: #fff;
+	font-family: 'system-ui';
+}
+
+h1{
+	font-weight: 700;
+	font-size: 3.4em;
+}
+
+.subtitle{
+	font-size: 1.25em;
+	opacity: 0.65;
+}
+
+
+
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color:#D6EA5C;
+  border: none;
+  color: black;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 17px;
+  padding: 12px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;  
+  text-decoration: none;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+h1  {
+
+  text-align: center;
+
+ 
+
+}

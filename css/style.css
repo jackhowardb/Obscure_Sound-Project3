@@ -2,7 +2,13 @@
 body {
   background-color: black;
   overflow-y: hidden !important;
+  
 }
+
+
+
+
+
 
 .navbar {
 
@@ -12,7 +18,7 @@ body {
 }
 
 .jumbotron {
-  background-image: url("/images/Hero1.png");
+  background-image: url("/images/HeroSpace.png");
   background-size: 100%;
   
   background-repeat: no-repeat;
@@ -35,22 +41,13 @@ body {
   border: .5px solid black;
   color:white;
   margin: 5%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;  font-weight: 700;
+	font-size: 3.4em;
    padding-left: 20px;
    padding-bottom: 20px;
    padding-top: 20px;
    border-radius: 70px 10px;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 .button {

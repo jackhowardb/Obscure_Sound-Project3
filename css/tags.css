@@ -1,14 +1,31 @@
 body {
-	background-image: url(/images/hero2.png);
+	/*background-image: url(/images/hero2.png);*/
   font-family:sans-serif;
   animation: gradient 15s ease infinite;
+  background-color: black;
 
   color:#eaeaea;
 }
+body{
+	background-color: black;
+	color: #fff;
+	font-family: 'system-ui';
+}
 
+h1{
+	font-weight: 700;
+	font-size: 2.4em;
+}
 .navbar-nav > li{
 	padding-left:30px;
 	padding-right:30px;
+  }
+
+  .navbar {
+
+	font-family: 'Roboto', sans-serif;
+	font-size: large;
+  
   }
 
 
@@ -24,7 +41,8 @@ body {
     width:800px;
     height:400px;
     margin:-150px 0 0 -300px;
-	background-color: rgba(0, 0, 0, 0.5);
+	/*background-color: rgba(0, 0, 0, 0.5);*/
+	background-color:#414040;
 	align-items: left;
     justify-content: left;
 	padding-left: 20px;
@@ -219,3 +237,38 @@ p
   }
   
 
+
+
+  .fade-in-text {
+	display: inline-block;
+	animation: fadeIn linear 3s;
+	-webkit-animation: fadeIn linear 3s;
+	-moz-animation: fadeIn linear 3s;
+	-o-animation: fadeIn linear 3;
+	-ms-animation: fadeIn linear 3s;
+  }
+  
+  @keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+  }
