@@ -3,8 +3,12 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/library2.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="index.js"></script>
+
+    <link rel="stylesheet" 
+    href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -13,10 +17,10 @@
 <body>
 
 
-    <!--Start Navbar-->
+     <!--Start Navbar-->
 
     
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -26,52 +30,27 @@
         </a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="tags.html">Discover Your Sound</a>
+            <a class="nav-link" href="tags.html">Featured</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Explore</a>
+            <a class="nav-link" href="player.html">Your Score</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Library</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="library2.html">OS Library</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Enter</button>
-        </form>
+        <ul class="navbar-nav sm-icons">
+          <li class="nav-item foo"><i class="fab fa-facebook-f"></i></li>
+          <li class="nav-item foo"><i class="fab fa-instagram"></i></li>
+          <li class="nav-item foo"><i class="fab fa-twitter"></i></li>
+          <li class="nav-item foo"><i class="fab fa-youtube"></i></li>
+      </ul>
       </div>
     </nav>
     <!--End Navbar-->
 
-    <!--Start Hero
-
-    <section class="hero">
-      <container class="herospace">
-
-    <div class="jumbotron rockBackground" id="about">
-      <div class="jumboCopy">
-      <h1 class="display-4">Check Out<br>Your Library</h1>
-      <p class="lead">I recommend these sites to all fans of music. 
-        From great writing to exclusive content, they
-         all provide great coverage of new artists.<br><br></p>
-      
-      
-      
+       
      
-      </div>
-    </div>
-    </container>
-
-
-    </section>-->
-
-
-
-
-
-
-    
-     <!--End Hero-->
 
      <container>
 
@@ -81,30 +60,105 @@
       <br><br>
       <div class="card-deck">
         <div class="card cardy2">
-          <img src="/images/library_images/Image 10.png" class="card-img-top" alt="...">
+          <img src="/images/Right.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Hockey – Wyeth IS</h5>
-            <p class="card-text">Hockey’s 2009 debut, Mind Chaos, was an insanely catchy blend of indie rock, dance, and soul that delivered on multiple levels, but unfortunately never made the impact it should have.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            <a href="library2.html" button class="button heroBut" style="vertical-align:middle"> <span>Play Track</span></button></a>
+            <!--<p class="card-text">Hockey’s 2009 debut, Mind Chaos, was an insanely catchy blend of indie rock, dance, and soul...</p>-->
+            <div class="Player">
+              <div class="buttons">
+                <div class="prev-track" onclick="prevTrack()">
+                  <i class="fa fa-step-backward fa-2x"></i>
+                </div>
+                <div class="playpause-track" onclick="playpauseTrack()">
+                  <i class="fa fa-play-circle fa-5x"></i>
+                </div>
+                <div class="next-track" onclick="nextTrack()">
+                  <i class="fa fa-step-forward fa-2x"></i>
+                </div>
+              </div>
+            </div>
+
+      
+              <a class="toggle2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Learn More&nbsp;&nbsp;&nbsp;
+              </a>
+   
+              <a class="card-icon fas fa-share-alt">&nbsp;&nbsp;Share</a> 
+
+              <h5>#Happy #Rock</h5>
+             
+            
+
           </div>
         </div>
+
         <div class="card cardy2">
           <img src="/images/library_images/Image 11.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Editors – The Weight of Your Love</h5>
-            <p class="card-text">British group Editors combine rich elements of post-punk and alternative to create a polished sound ripe for radio placement. With a Mercury Prize nomination for 2005 debut</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            <a href="library2.html" button class="button heroBut" style="vertical-align:middle"> <span>Play Track</span></button></a>
+            <h5 class="card-title">Editors – The Weight</h5>
+
+            <div class="Player">
+              <div class="buttons">
+                <div class="prev-track" onclick="prevTrack()">
+                  <i class="fa fa-step-backward fa-2x"></i>
+                </div>
+                <div class="playpause-track" onclick="playpauseTrack()">
+                  <i class="fa fa-play-circle fa-5x"></i>
+                </div>
+                <div class="next-track" onclick="nextTrack()">
+                  <i class="fa fa-step-forward fa-2x"></i>
+                </div>
+              </div>
+            </div>
+
+            <a class="toggle2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              Learn More&nbsp;&nbsp;&nbsp;
+            </a>
+ 
+            <a class="card-icon fas fa-share-alt">&nbsp;&nbsp;Share</a> 
+
+            <h5>#R&B #Soft</h5>
+           
+          
+
+
+
           </div>
         </div>
+
+
         <div class="card cardy2">
           <img src="/images/library_images/Image 12.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">The Mowgli’s – Waiting for the Dawn</h5>
-            <p class="card-text">LA-based eight-piece The Mowgli’s pack a crisply reverberating rock punch ideal for a beach day. Their Californian sound is joyously upbeat, with effervescent choruses that soar. </p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            <a href="library2.html" button class="button heroBut" style="vertical-align:middle"> <span>Play Track</span></button></a>
+            <h5 class="card-title">The Mowgli’s – Waiting </h5>
+
+            <div class="Player">
+              <div class="buttons">
+                <div class="prev-track" onclick="prevTrack()">
+                  <i class="fa fa-step-backward fa-2x"></i>
+                </div>
+                <div class="playpause-track" onclick="playpauseTrack()">
+                  <i class="fa fa-play-circle fa-5x"></i>
+                </div>
+                <div class="next-track" onclick="nextTrack()">
+                  <i class="fa fa-step-forward fa-2x"></i>
+                </div>
+              </div>
+            </div>
+
+            <a class="toggle2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              Learn More&nbsp;&nbsp;&nbsp;
+            </a>
+ 
+            <a class="card-icon fas fa-share-alt">&nbsp;&nbsp;Share</a> 
+
+
+            <h5>#Dancy #Indie</h5>
+           
+          
+
+
+
           </div>
         </div>
       </div>
@@ -124,41 +178,77 @@
      <div class="card cardy mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="images/library_images/Image 2.png" class="card-img" alt="...">
+            <img src="images/library_images/Image 12.png" class="card-img" alt="...">
           </div>
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">Grouplove – Spreading Rumours</h5>
-              <p class="card-text">With the abundant success of Grouplove’s first album Never Trust a Happy Song – producing hits such as “Colours”, “Itchin’ On A Photograph”, and “Tongue Tied” – and the release of hit single “Ways to Go”, anticipation for Grouplove’s second album Spreading Rumours was almost too much to bear for devoted fans of the funky alt-pop group from Los Angeles.
+              <p class="card-text">With the abundant success of Grouplove’s first album Never Trust a Happy Song – producing hits such as “Colours”, “Itchin’ On A Photograph”, and “Tongue Tied” – and the release of hit single “Ways to Go”... 
 
-                As a whole, the album seems jumbled and out of place, as if it’s not quite sure where it fits in musically, especially when compared with the extremely well-arranged freshman effort, Never Trust a Happy Song. However, when examining individual tracks, especially “Ways to Go”, “Shark Attack”, “I’m With You”, and “Hippy Hill”, it’s hard to deny the inevitable success of the work. </p>
-              <p class="card-text"><small class="text-muted">by Zach Beckstrand</small></p>
+                <p>
+                  
+                  <a class="toggle2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Learn More&nbsp;&nbsp;&nbsp;
+                  </a>
+
+                  <br>
+                  <a class="toggle far fa-comment-alt" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Comments
+                  </a>
+                 
+                  <a class="card-icon fas fa-share-alt">&nbsp;&nbsp;Share</a> 
+                  <a class="card-icon fas fa-thumbs-up">&nbsp;&nbsp;Like</a>
+                 
+                </p>
+
+               
+
+
+                <div class="collapse" id="collapseExample">
+
+                  <div class="card card-body">
+
+                    <p id="comments">Comments</p>
+
+                    <p id="names"><i class="far fa-user-circle"></i>&nbsp;&nbsp;Gregory Addams</p>
+
+                    <p id=com>&nbsp;&nbsp;&nbsp;&nbsp;I think this article explains the band very well!
+                    </p>
+
+
+                    <p id="names"><i class="far fa-user-circle"></i>&nbsp;&nbsp;Samuel Richards</p>
+
+
+                    <section id="app">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="comment">
+                          <p v-for="items in item" v-text="items"></p>
+                            </div><!--End Comment-->
+                            </div><!--End col -->
+                            </div><!-- End row -->
+                        <div class="row">
+                          <div class="col-6">
+                        <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+                            <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+                          </div><!-- End col -->
+                        </div><!--End Row -->
+                      </div><!--End Container -->
+                    </section><!-- end App -->
+                    
+
+
+
+                  </div>
+                </div>
+             <!-- <p class="card-text"><small class="text-muted">by Zach Beckstrand</small></p>-->
             </div>
           </div>
         </div>
       </div>
 
       <br><br><br>
-
-
-      <div class="card cardy mb-3" style="max-width: 540px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="images/library_images/Image 10.png" class="card-img" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Hockey – Wyeth IS</h5>
-              <p class="card-text">Hockey’s 2009 debut, Mind Chaos, was an insanely catchy blend of indie rock, dance, and soul that delivered on multiple levels, but unfortunately never made the impact it should have. After losing two members in 2010, the band returned this year with a new LP called Wyeth IS. Stylistically, the two records couldn’t be farther apart, with the latter falling squarely into an ’80s vibe that the first album only touched upon. Drum machines fill the air, space permeates every song, and the tempo very rarely hits more than a crawl. While these things might be seen as detriments in some eyes, they’re also features that allow Wyeth IS to truly excel.
-            </p>
-              <p class="card-text"><small class="text-muted">by by Chris</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <br><br><br>
-
 
 
       <div class="card cardy mb-3" style="max-width: 540px;">
@@ -168,9 +258,67 @@
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Editors – The Weight of Your Love</h5>
-              <p class="card-text">British group Editors combine rich elements of post-punk and alternative to create a polished sound ripe for radio placement. With a Mercury Prize nomination for 2005 debut The Back Room and a slew of top 10 singles, Editors have built a nice following, having already been around for almost a decade now. They emerged right around a period of post-punk revivalism in the early ’00s, with groups like Interpol successfully borrowing from the moody post-punk likes of Joy Division and The Chameleons UK. Editors have usually waded between Interpol’s post-punk ambition and Snow Patrol’s radio-friendly alternative, though since The Back Room have struggled to find a consistent stylistic vision. </p>
-              <p class="card-text"><small class="text-muted">by Mike Mineo</small></p>
+              <h5 class="card-title">Grouplove – Spreading Rumours</h5>
+              <p class="card-text">With the abundant success of Grouplove’s first album Never Trust a Happy Song – producing hits such as “Colours”, “Itchin’ On A Photograph”, and “Tongue Tied” – and the release of hit single “Ways to Go”... 
+
+                <p>
+                  
+                  <a class="toggle2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Learn More&nbsp;&nbsp;&nbsp;
+                  </a>
+
+                  <br>
+                  <a class="toggle far fa-comment-alt" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Comments
+                  </a>
+                 
+                  <a class="card-icon fas fa-share-alt">&nbsp;&nbsp;Share</a> 
+                  <a class="card-icon fas fa-thumbs-up">&nbsp;&nbsp;Like</a>
+                 
+                </p>
+
+               
+
+
+                <div class="collapse" id="collapseExample">
+
+                  <div class="card card-body">
+
+                    <p id="comments">Comments</p>
+
+                    <p id="names"><i class="far fa-user-circle"></i>&nbsp;&nbsp;Gregory Addams</p>
+
+                    <p id=com>&nbsp;&nbsp;&nbsp;&nbsp;I think this article explains the band very well!
+                    </p>
+
+
+                    <p id="names"><i class="far fa-user-circle"></i>&nbsp;&nbsp;Samuel Richards</p>
+
+
+                    <section id="app">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="comment">
+                          <p v-for="items in item" v-text="items"></p>
+                            </div><!--End Comment-->
+                            </div><!--End col -->
+                            </div><!-- End row -->
+                        <div class="row">
+                          <div class="col-6">
+                        <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+                            <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+                          </div><!-- End col -->
+                        </div><!--End Row -->
+                      </div><!--End Container -->
+                    </section><!-- end App -->
+                    
+
+
+
+                  </div>
+                </div>
+             <!-- <p class="card-text"><small class="text-muted">by Zach Beckstrand</small></p>-->
             </div>
           </div>
         </div>
@@ -179,50 +327,26 @@
       <br><br><br>
 
 
-      <div class="card cardy mb-3" style="max-width: 540px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="images/library_images/Image 12.png" class="card-img" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">The Mowgli’s – Waiting for the Dawn</h5>
-              <p class="card-text">LA-based eight-piece The Mowgli’s pack a crisply reverberating rock punch ideal for a beach day. Their Californian sound is joyously upbeat, with effervescent choruses that soar with a predictable nonchalance. The beach-side setting shown on the cover of their new album, Waiting for the Dawn, provides an apt summary of the group’s ambition within, which is equivalent to lounging on a beach chair without a care in the world. Waiting for the Dawn is devoid of anything resembling innovation, and for all the emotive rockers and polished production there is minimal impact, despite maybe serving as background fodder at a tiki bar. There are no game-changers for The Mowgli’s here, nor a single track out of the 13 that dares to gravitate from the norm. </p>
-              <p class="card-text"><small class="text-muted">by Mike Mineo</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
       
       <br><br><br>
 
 
-
-    
-    
+      
 
 
-
-     
-
- 
-    
-
-    
-    
-  <!---->  <!-- Preloader 
-        <div class="box">
-            <div class="box_container">
-                <p class="box_content">Obscure Sound</p>
-            </div>
-        </div>
-
-    -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
+<!-- Vue JS -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+
+
+<script src="js/library2.js"></script> 
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 

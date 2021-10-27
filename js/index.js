@@ -5,3 +5,5 @@ document.querySelectorAll('.wrapper > img')
       item.style.left = 150 * (index - 3) + 'px'
       item.style.animationDelay = `${delay}s`
     })
+
+    

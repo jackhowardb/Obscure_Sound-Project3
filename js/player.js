@@ -1,4 +1,16 @@
 
+function fade() {
+
+  $(".preloader").fadeOut("slow")
+  
+  
+  }
+  setTimeout(fade, 1000);
+  
+
+
+
+
 // Select all links with hashes
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
@@ -232,5 +244,6 @@ function seekUpdate() {
 
 // Load the first track in the tracklist
 loadTrack(track_index);
+
 
 

@@ -1,5 +1,4 @@
 body {
-	/*background-image: url(/images/hero2.png);*/
   font-family:sans-serif;
   animation: gradient 15s ease infinite;
   background-color: black;
@@ -30,8 +29,6 @@ h1{
 
 
 
-
-
 #wrapper
 {
     position:absolute;
@@ -48,9 +45,6 @@ h1{
 	padding-left: 20px;
 	padding-top: 20px;
 	border-radius: 10px 70px;
-	
-	
-
 	
 }
 
@@ -271,4 +265,53 @@ p
   @-ms-keyframes fadeIn {
 	0% {opacity:0;}
 	100% {opacity:1;}
+  }
+
+  a:not(.button) {
+	position: relative;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 800;
+	color: black;
+	overflow: hidden;
+  }
+  
+  a:not(.button) {
+	/* Same as before */
+	background: linear-gradient(to right, #D6EA5C, #D6EA5C 50%, white 50%);
+  }
+  a:not(.button) {
+	/* Same as before */
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+	background-position: 100%;
+  }
+  a:not(.button) {
+	/* Same as before */
+	transition: background-position 875ms ease;
+  }
+  a:hover:not(.button) {
+	background-position: 0 100%;
+  }
+  
+  .foo {
+	color: white;
+  }
+  
+  .navbar .navbar-nav .foo:hover{
+	color: #D6EA5C;
+	
+  }
+  
+  .sm-icons {
+	flex-direction: row;
+  }
+  @media only screen and (max-width: 960px) {
+	.sm-icons .nav-item {
+	  padding-right: 1em;
+	  text-align: center;
+	  padding-top: 20px;
+	}
   }

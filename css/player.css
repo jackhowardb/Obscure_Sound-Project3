@@ -277,8 +277,10 @@ body {
 }
 
 .moreInfo {
-  background-color: #191919;
+  /*background-color: #191919;*/
+  background-color: black;
   margin-top: -40px;
+ 
  
 }
 
@@ -338,11 +340,71 @@ body {
 }
   
 
-.noBlue {
-  text-decoration: none !important;
+
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-image: url('/images/library_images/editor-0.7s-47px.gif');
+  background-repeat: no-repeat; 
+  background-color: black;
+  background-position: center;
+}
+
+.preText {
+  text-align: center;
 }
 
 
 
+a:not(.button) {
+  position: relative;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 800;
+  color: black;
+  overflow: hidden;
+}
 
+a:not(.button) {
+  /* Same as before */
+  background: linear-gradient(to right, #D6EA5C, #D6EA5C 50%, white 50%);
+}
+a:not(.button) {
+  /* Same as before */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+}
+a:not(.button) {
+  /* Same as before */
+  transition: background-position 875ms ease;
+}
+a:hover:not(.button) {
+  background-position: 0 100%;
+}
 
+.foo {
+  color: white;
+}
+
+.navbar .navbar-nav .foo:hover{
+  color: #D6EA5C;
+  
+}
+
+.sm-icons {
+  flex-direction: row;
+}
+@media only screen and (max-width: 960px) {
+  .sm-icons .nav-item {
+    padding-right: 1em;
+    text-align: center;
+    padding-top: 20px;
+  }
+}
