@@ -3,7 +3,7 @@
 
 
 body {
-    background-color:#191919;
+    background-color:#202020;
     overflow-y: hidden !important;
     
   }
@@ -22,7 +22,7 @@ body {
   .cardy2 {
     margin-left: 5% !important;
     margin-right: 5% !important;
-    background-color: black;
+    background-color: #202020;
     border-style: solid;
   border-color: white;
   border-radius: 1px 1px 70px 1px;
@@ -36,7 +36,7 @@ body {
     margin-bottom: 10px; /* Added */
     min-width: 1000px;
     border-radius: 70px 10px;
-    background-color: black;
+    background-color: #202020;
 
     border-color: white;
 
@@ -106,7 +106,7 @@ body {
 }
 
 body{
-	background-color: black;
+	background-color: #202020;
 	color: #fff;
 	font-family: 'system-ui';
 }

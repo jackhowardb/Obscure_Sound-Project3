@@ -1,14 +1,15 @@
 body {
   font-family:sans-serif;
   animation: gradient 15s ease infinite;
-  background-color: black;
+  background-color: #202020;
 
   color:#eaeaea;
+  ;
 }
 body{
-	background-color: black;
-	color: #fff;
+	
 	font-family: 'system-ui';
+	background-image: url('images/Mask Group 1335.png')
 }
 
 h1{
@@ -39,7 +40,7 @@ h1{
     height:400px;
     margin:-150px 0 0 -300px;
 	/*background-color: rgba(0, 0, 0, 0.5);*/
-	background-color:#414040;
+	background-color:#202020;
 	align-items: left;
     justify-content: left;
 	padding-left: 20px;

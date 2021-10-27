@@ -1,6 +1,6 @@
 
 body {
-  background-color: black;
+  background-color: #202020;
   overflow-y: hidden !important;
   
 }
@@ -144,8 +144,6 @@ a:hover:not(.button) {
     padding-top: 20px;
   }
 }
-
-
 
 
 
