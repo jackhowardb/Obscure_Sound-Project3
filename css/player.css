@@ -160,7 +160,7 @@ body {
     height: 250px;
     width: 250px;
     background-image: URL(
-       "/images/Mask\ Group\ 1337.png");
+       "../images/albumArt.png");
     background-size: cover;
     background-position: center;
     border-radius: 2%;
