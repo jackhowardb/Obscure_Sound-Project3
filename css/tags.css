@@ -59,14 +59,14 @@ p
 .tags-input 
 {
   	list-style : none;   
-  	border:1px solid #ccc;
+  	border:1px solid #414040;
   	display:inline-block;
   	padding:5px;
   	height: 45px;
     font-size:14px;
-    background:#f3f3f3;
+    background:#414040;
     width: 500px;
-    border-radius:2px;
+    border-radius:4px;
     overflow:hidden;
 }
 
@@ -111,6 +111,7 @@ p
 	font-size: 14px;
 	margin-top: 5px;
   background:transparent;
+  color: white;
 }
 
 .tags-new input[type="text"]:focus
@@ -123,14 +124,14 @@ p
   .tags-input2 
 {
   	list-style : none;   
-  	border:1px solid #ccc;
+  	border:1px solid #414040;
   	display:inline-block;
   	padding:5px;
   	height: 45px;
     font-size:14px;
-    background:#f3f3f3;
+    background:#414040;
     width: 500px;
-    border-radius:2px;
+    border-radius:4px;
     overflow:hidden;
 }
 
@@ -176,6 +177,7 @@ p
 	font-size: 14px;
 	margin-top: 5px;
   background:transparent;
+  color: white;
 }
 
 .tags-new2 input[type="text"]:focus
@@ -277,11 +279,11 @@ p
 	overflow: hidden;
   }
   
-  a:not(.button) {
+  a:not(.button):not(.current) {
 	/* Same as before */
 	background: linear-gradient(to right, #D6EA5C, #D6EA5C 50%, white 50%);
   }
-  a:not(.button) {
+  a:not(.button):not(.current) {
 	/* Same as before */
 	background-clip: text;
 	-webkit-background-clip: text;
@@ -289,12 +291,16 @@ p
 	background-size: 200% 100%;
 	background-position: 100%;
   }
-  a:not(.button) {
+  a:not(.button):not(.current) {
 	/* Same as before */
 	transition: background-position 875ms ease;
   }
-  a:hover:not(.button) {
+  a:hover:not(.button):not(.current) {
 	background-position: 0 100%;
+  }
+  
+  .current {
+	color: #D6EA5C !important;
   }
   
   .foo {
@@ -315,4 +321,40 @@ p
 	  text-align: center;
 	  padding-top: 20px;
 	}
+  }
+
+
+
+  @media only screen and (max-width: 700px) {
+
+
+	.halfText {
+		margin-left: 20%;
+		display: flex;
+	}
+
+	.fullText {
+		display: none;
+	}
+
+
+	.tags-input2, .tags-input, .button {
+		
+		width: 300px;
+		margin-left: 20%;
+		
+	}
+
+	
+	}
+  
+
+  @media only screen and (min-width: 701px) {
+
+	.halfText {
+
+		display: none;
+	}
+
+	
   }

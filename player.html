@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    <title>Obscure Sound</title>
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -26,24 +28,23 @@
   <body>
       <!--Start Navbar-->
 
-    
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #202020;">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #202020;">
         <a class="navbar-brand" href="home.html">
           <img src="/images/OS Logo.png" width="100" height="100" class="d-inline-block align-top" alt="">
         </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="tags.html">Featured</a>
+            <a class="nav-link" href="tags.html">Listen OS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="player.html">New Music</a>
+            <a class="nav-link current" href="player.html">New Music</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="library2.html">OS Library</a>
+            <a class="nav-link" href="library2.html">My Library</a>
           </li>
         </ul>
         <ul class="navbar-nav sm-icons">
@@ -51,6 +52,7 @@
           <li class="nav-item foo"><i class="fab fa-youtube"></i></li>
           <li class="nav-item foo"><i class="fab fa-instagram"></i></li>
           <li class="nav-item foo"><i class="fab fa-facebook-f"></i></li>
+          <li class="nav-item foo"><img src="images/Avatar.png" style="width:25px;height:25px;"></i></li>
       </ul>
       </div>
     </nav>
@@ -71,14 +73,16 @@
 
       
         <div class="Title">
-          <h1 class="display-4">&nbsp;&nbsp;Welcome to Your <br>&nbsp;&nbsp;Personal Playlist.</h1>
+          <h1 class="display-4"><br>&nbsp;&nbsp;Experience New Music</h1>
         </div>
+        
         <div class="Picture">
+          <h5 id="hash">#OSPicks, &nbsp; #Happy</h5>
           <div class="track-art"></div>
         </div>
         <div class="Bio">
           
-          <p><br><strong>#indie #calm • I Called Your Name • Tape Tension</strong><br><br>“I Called Your Name” is a track out from Tape Tension, showing a lush and bouncy electro-pop charm that glistens and hooks... <br><br><strong><a href="#moreInfor">More Below</a></strong></p>
+          <p><br><br><strong>I Called Your Name • Tape Tension</strong>&nbsp;&nbsp;&nbsp;<img src="images/MDI - music-note-plus.png" style="width:25px;height:25px;" title="Add To Library" onclick="alert('Track is added to your library!')"><br><br>“I Called Your Name” is a track out from Tape Tension, showing a lush and bouncy electro-pop charm that glistens and hooks... <br><br><strong><a href="#moreInfor">More Below</a></strong></p>
           <div class="Player">
             <div class="buttons">
               <div class="prev-track" onclick="prevTrack()">
@@ -118,17 +122,16 @@
 
       <div class="card mb-3" style="max-width: 540px;">
          <div class="row no-gutters">
-           <div class="col-md-4">
+           <div class="col-md-4 cardRes">
              <img src="images/Component 366 – 2.png" class="card-img" alt="...">
            </div>
            <div class="col-md-8">
              <div class="card-body">
-               <h5 class="card-title">I Called Your Name • Tape Tension</h5>
-               <p class="card-text">With the abundant success of Grouplove’s first album Never Trust a Happy Song – producing hits such as “Colours”, “Itchin’ On A Photograph”, and “Tongue Tied” – and the release of hit single “Ways to Go”, anticipation for Grouplove’s second album Spreading Rumours was almost too much to bear for devoted fans of the funky alt-pop group from Los Angeles.
- 
-                 As a whole, the album seems jumbled and out of place, as if it’s not quite sure where it fits in musically, especially when compared with the extremely well-arranged freshman effort, Never Trust a Happy Song. However, when examining individual tracks, especially “Ways to Go”, “Shark Attack”, “I’m With You”, and “Hippy Hill”, it’s hard to deny the inevitable success of the work. </p>
-                 <button class="button heroBut" onclick="alert('Track is added to your library!')" style="vertical-align:middle"> <span>Add to Library</span></button>
-                 <a href="library2.html" button class="button heroBut" style="vertical-align:middle"> <span>Visit Library</span></button></a>
+               <h5 class="card-title">I Called Your Name • Tape Tension &nbsp;&nbsp;&nbsp;<img src="images/MDI - music-note-plus.png" title="Add To Library" style="width:25px;height:25px;" onclick="alert('Track is added to your library!')"><br><br></h5>
+               
+               <p class="card-text">“I Called Your Name” is a track out from Tape Tension, showing a lush and <br> bouncy electro-pop charm that glistens and hooks. “I Called Your Name”<br> marks the third and final single from Tape Tension’s upcoming second full-length album, Questions In Balance. Serene, spacious vocals play amidst pulsing synth effervescence; the percussive lead-in to the twinkling around 01:08 plays with a charming allure. “I Called Your Name” is serene, twinkling ear candy from Tape Tension.<br><br></p>
+                 <!--<button class="button heroBut" onclick="alert('Track is added to your library!')" style="vertical-align:middle"> <span>Add to Library</span></button>-->
+                 <a href="library2.html" button class="button heroBut" style="vertical-align:middle"> <span>Visit My Library</span></button></a>
 
                  
 
@@ -151,7 +154,7 @@
 
 
       <div class="preloader">
-        <h4 class="preText"><br><br><br><br><br><br><br><br><br>Loading Playlist...</h4>
+       
       </div>
       
     

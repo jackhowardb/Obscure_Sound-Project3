@@ -1,7 +1,6 @@
 
 
   
-  
 $(document).ready(function(){ 
  
     $(".primaryContained").on('click', function(){
@@ -28,4 +27,6 @@ new Vue({
  
   });
 
+
+  
 

@@ -59,10 +59,17 @@ body {
   background-color: transparent;
   height: fit-content;
   display: flex;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
   margin-top: -15px;
   
+}
+
+.display-4 {
+
+  text-align: center;
+  margin-top: -20px;
+
 }
 
 .jumboCopy {
@@ -80,7 +87,7 @@ body {
   font-family: 'Roboto', sans-serif;
    padding-left: 20px;
    padding-bottom: 20px;
-   padding-top: 20px;
+   padding-top: 0px;
    border-radius: 70px 10px;
 }
 
@@ -153,7 +160,7 @@ body {
     height: 250px;
     width: 250px;
     background-image: URL(
-       "/images/Component\ 366\ –\ 2.png");
+       "/images/Mask\ Group\ 1337.png");
     background-size: cover;
     background-position: center;
     border-radius: 2%;
@@ -354,9 +361,6 @@ body {
   background-position: center;
 }
 
-.preText {
-  text-align: center;
-}
 
 
 
@@ -369,11 +373,11 @@ a:not(.button) {
   overflow: hidden;
 }
 
-a:not(.button) {
+a:not(.button):not(.current) {
   /* Same as before */
   background: linear-gradient(to right, #D6EA5C, #D6EA5C 50%, white 50%);
 }
-a:not(.button) {
+a:not(.button):not(.current) {
   /* Same as before */
   background-clip: text;
   -webkit-background-clip: text;
@@ -381,14 +385,17 @@ a:not(.button) {
   background-size: 200% 100%;
   background-position: 100%;
 }
-a:not(.button) {
+a:not(.button):not(.current) {
   /* Same as before */
   transition: background-position 875ms ease;
 }
-a:hover:not(.button) {
+a:hover:not(.button):not(.current) {
   background-position: 0 100%;
 }
 
+.current {
+  color: #D6EA5C !important;
+}
 .foo {
   color: white;
 }
@@ -408,3 +415,46 @@ a:hover:not(.button) {
     padding-top: 20px;
   }
 }
+
+#hash {
+  color: white;
+  padding-left: 30px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .jumboCopy {
+
+    display: table-column;
+
+    align-items: center;
+
+    background-color: #202020;
+    border-color: #202020;
+
+  }
+
+  .track-art, #hash {
+    margin-left: 100px;
+  }
+
+ .cardRes {
+
+  max-width: 240px;
+  margin-left: 100px;
+
+    
+
+  }
+
+  .card-text {
+    max-width: 400px;
+
+  }
+
+    
+  
+}
+
+

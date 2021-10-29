@@ -22,22 +22,23 @@
 
     
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #202020;">
+    <a class="navbar-brand" href="home.html">
+      <img src="/images/OS Logo.png" width="100" height="100" class="d-inline-block align-top" alt="">
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" href="home.html">
-        <img src="/images/OS Logo.png" width="100" height="100" class="d-inline-block align-top" alt="">
-      </a>
+      
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="tags.html">Featured</a>
+          <a class="nav-link" href="tags.html">Listen OS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="player.html">New Music</a>
+          <a class="nav-link current" href="player.html">New Music</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="library2.html">OS Library</a>
+          <a class="nav-link" href="library2.html">My Library</a>
         </li>
       </ul>
       <ul class="navbar-nav sm-icons">
@@ -45,6 +46,7 @@
           <li class="nav-item foo"><i class="fab fa-youtube"></i></li>
           <li class="nav-item foo"><i class="fab fa-instagram"></i></li>
           <li class="nav-item foo"><i class="fab fa-facebook-f"></i></li>
+          <li class="nav-item foo"><img src="images/Avatar.png" style="width:25px;height:25px;"></i></li>
     </ul>
     </div>
   </nav>
@@ -55,8 +57,11 @@
 <section class="content fade-in-text">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <div id="wrapper">
-      <h1>Step 1: Add tags for your favorite genres </h1>
-      <p>Tags are separated by commas: i.e. #OSPicks, #Rock, #Hip-Hop, or #Indie  </p>
+      <h1 class="fullText">Step 1: Add tags for your favorite genres </h1>
+      <h1 class="halfText">Add #Genres </h1>
+
+      
+     
       <ul class="tags-input">
         <li class="tags">OS Picks<i class="fa fa-times"></i></li>
         <li class="tags-new">
@@ -64,15 +69,18 @@
           
         </li>
       </ul>  
-      <h1>Step 2: Add tags to describe your mood </h1>
-      <p>Tags are separated by commas: i.e.  #Happy, #Sad, #Calm, or #Blah  </p>
+      <p class="fullText">Tags are separated by commas: i.e.  #Happy, #Sad, #Calm, or #Blah  </p>
+      <br>
+      <h1 class="fullText">Step 2: Add tags to describe your mood </h1>
+      <h1 class="halfText">Add #Moods </h1>
       <ul class="tags-input2">
         <li class="tags2">Relaxed<i class="fa fa-times"></i></li>
         <li class="tags-new2">
           <input type="text"> 
           
         </li>
-      </ul>  
+      </ul> 
+      <p class="fullText">Tags are separated by commas: i.e.  #Happy, #Sad, #Calm, or #Blah  </p>
       <br>
       <a href="player.html" button class="button heroBut" style="vertical-align:middle"> <span>Listen Now</span></button></a>
     </div>
